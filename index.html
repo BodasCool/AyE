@@ -1,0 +1,455 @@
+<!--Es la página pasada, en caso de que le haya faltado algo a la que baje de gihub-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Boda Ashley & Erik</title>
+    <link rel="stylesheet" href="css/styles.css">
+<!--    la línea de abajo es para poner un icono de la página en el browser-->
+    <link rel="icon" type="image/x-icon" href="images/AE_icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Libre+Franklin:ital,wght@1,100&family=Sacramento&display=swap" rel="stylesheet">
+    <style>
+
+        body {margin: 0;
+            text-align: center;
+            background-image: white;
+        }
+
+        .blanco {
+            padding: 20px;
+            background-image: url("images/blanco2.jpeg");
+            box-shadow: 0px 4px 20px;
+        }
+
+        .rosa{
+/*<!--            background-color: #ADB9CA;-->*/
+            background-image: url("images/gris1.jpeg");
+            padding-top: 25px;
+            padding-bottom: 25px;
+            box-shadow: 0px 4px 20px inset;
+        }
+
+        .main-image {
+          background-image: url("images/parismain.png");
+          background-color: #cccccc;
+          height: 1500px;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          position: relative;
+          box-shadow: 1px -9px 20px 0px inset;
+        }
+
+        .iglesia{
+            overflow: hidden;
+            width: 80%;
+            background-color: white;
+            border-style: ridge;
+            margin: auto;
+            padding-bottom: 20px;
+            box-shadow: 2px 2px 10px;
+            background-image: url("images/blanco2.jpeg");
+        }
+
+        .btn_white {
+          background: white;
+          background-image: -webkit-linear-gradient(top, white, #e4eaf2);
+          background-image: -moz-linear-gradient(top, white, #e4eaf2);
+          background-image: -ms-linear-gradient(top, white, #e4eaf2);
+          background-image: -o-linear-gradient(top, white, #e4eaf2);
+          background-image: linear-gradient(to bottom, white, #e4eaf2);
+          -webkit-border-radius: 6;
+          -moz-border-radius: 6;
+          border-radius: 6px;
+          font-family: Arial;
+          color: black;
+          font-size: 45px;
+          padding: 7px 10px 7px 10px;
+          text-decoration: none;
+        }
+
+        .btn_white:hover {
+          background: #ffffff;
+          background-image: -webkit-linear-gradient(top, #ffffff, #adadad);
+          background-image: -moz-linear-gradient(top, #ffffff, #adadad);
+          background-image: -ms-linear-gradient(top, #ffffff, #adadad);
+          background-image: -o-linear-gradient(top, #ffffff, #adadad);
+          background-image: linear-gradient(to bottom, #ffffff, #adadad);
+          text-decoration: none;
+        }
+
+        @media only screen and (max-height: 1300px) {
+            .audio {
+                width: 50px;
+            }
+
+            .rosa{
+                box-shadow: 0px 2px 10px inset;
+            }
+
+            .main-image {
+                height: 700px;
+            }
+
+            .h1-main {
+                padding-top: 10px;
+                font-size: 100px;
+            }
+
+            .clock {
+                top: 90%;
+                font-size: 50px;
+            }
+
+            .frase {
+                margin-left: 20%;
+                margin-right: 20%;
+                font-size: 25px;
+            }
+
+            .iglesia {
+                margin-left: 50px;
+                margin-right: 50px;
+                display: inline-block;
+                width: 110mm;
+            }
+
+            .hr_horarios{
+                display:none;
+            }
+
+            .br_horarios {
+                display:none;
+            }
+
+            h1 {
+                font-family: 'EB Garamond', serif;
+                font-size: 60px;
+            }
+
+            h3 {
+                font-size: 45px;
+            }
+
+            h2{
+                font-size: 30px;
+            }
+
+            .flor-left{
+                height: 150px;
+            }
+
+            .flor-right{
+                height: 150px;
+            }
+
+            p {
+                line-height: 1;
+                padding-left: 20px;
+                padding-right: 20px;
+                font-size: 20px;
+            }
+
+            .btn {
+                font-size: 20px;
+            }
+
+            .etiqueta-img{
+                height: 100px
+            }
+
+            .btn_white {
+              font-size: 20px;
+            }
+
+            .nombre {
+                font-size: 30px;
+            }
+
+            .asistencia {
+                font-size: 30px;
+            }
+
+            .saludo{
+                font-size: 30px;
+            }
+
+            .code {
+                font-size: 30px;
+            }
+
+            .enviar{
+                font-size: 30px
+            }
+
+            hr {
+                border-width: 7px;
+                width: 70px;
+            }
+
+            .correo {
+                font-size: 20px;
+            }
+
+            .img-grande{
+                height: 700px
+            }
+        }
+    </style>
+</head>
+<body>
+<audio id="player" src="musica.mp3"></audio>
+<img class="audio" alt="" src="images/play.png" id="playpause" onclick="play()"/>
+
+<!--portada-->
+    <div class="main-image">
+      <div class="main-text">
+        <h1 class="h1-main"> Ashley & Erik</h1>
+<!--        <h1 class="h1-main"> &</h1>-->
+<!--            <h1 class="h1-main"> Christian</h1>-->
+      </div>
+        <h1 class="clock">24/10/26 </h1>
+    </div>
+<!--bendicion-->
+    <div class="rosa">
+        <h1 style="">Con la bendición de Dios y nuestros padres</h1>
+        <div class="contenedor_horarios">
+            <div class="iglesia">
+                <h2>Guillermo Mier Saad</h2>
+                <h2>Sara Beatriz Escurra Ibáñez</h2>
+            </div>
+            <br class="br_horarios">
+            <div class="iglesia">
+                <h2>Luis Melendez de la Torre</h2>
+                <h2>Ana Elisa Rasgado Villagómez</h2>
+            </div>
+        <div style="clear: both"></div>
+        </div>
+        <h1>Celebremos nuestra unión matrimonial.</h1>
+    </div>
+<!--cuanto falta-->
+    <div style="background-color: white;">
+        <h3 class="frase" >"what we do in life echoes in eternity"</h3>
+        <h3 class="frase"> ―Maximus Decimus Meridius</h3>
+        <br>
+        <div class="faltan">
+            <h2 class="falta">Faltan</h2>
+            <img class="flor-left" src="images/flor.jpg">
+            <img class="flor-right" src="images/flor.jpg">
+            <h2 class="tiempo" id="demo"></h2>
+            <h2 class="falta" >para nuestra boda.</h2>
+
+        </div>
+        <br>
+<!--        <img class="flor-right" src="images/flor.jpg">-->
+    </div>
+    <div style="clear: both"></div>
+<!--Horarios-->
+    <div class="rosa">
+        <h1>Horarios</h1>
+        <div class="contenedor_horarios">
+        <div class="iglesia">
+            <h2>Ceremonia Religiosa</h2>
+            <img class="iglesia-img" src="images/iglesia.png">
+            <p>Capilla San Peregrino</p>
+            <p>5:30 pm</p>
+            <p>Las Huertas 119</p>
+            <p>20100 Aguascalientes</p>
+            <p>Ags., México</p>
+            <a class="btn" href="https://maps.app.goo.gl/MRPSF8zdngrerE137">Mapa</a>
+        </div>
+        <br class="br_horarios">
+<!--         <hr class="hr_horarios">-->
+        <br class="br_horarios">
+        <div class="iglesia">
+            <h2>Recepción</h2>
+                <img class="hotel-img" src="images/salon.png">
+                <p>Jardín Quinta Esmeralda</p>
+                <p>Los esperamos después de la misa</p>
+                <p>Carr Jesús Ma Valladolid #1139</p>
+                <p>20920 Jesús María</p>
+                <p>Ags., México</p>
+                <a class="btn" href="https://maps.app.goo.gl/unZNzRkpvqZmyB7q6">Mapa</a>
+        </div>
+        <div style="clear: both"></div>
+        </div>
+        <br>
+    </div>
+<!--codigo de etiqueta-->
+    <div class="blanco">
+        <h1>Código de Etiqueta</h1>
+        <h2>Formal</h2>
+        <img class="etiqueta-img" src="images/formal.png">
+        <br>
+        <br>
+    </div>
+<!--Mesa de regalos-->
+    <div class="rosa">
+        <h1>Mesa de Regalos</h1>
+        <div class="iglesia">
+            <h2>Cuenta Bancaria Christian</h2>
+            <p>Christian Mier Escurra</p>
+            <p>Cuenta: 0179643494</p>
+            <p>CLABE: 012010001796434941</p>
+            <p>Banco: BBVA</p>
+        </div>
+        <br class="br_horarios">
+        <br class="br_horarios">
+        <div class="iglesia">
+            <h2>Cuenta Bancaria Julissa</h2>
+            <p>Julissa Montserrat Caballero-Morlesin Tijerina</p>
+            <p>Cuenta: 4152 3140 6655 3903</p>
+            <p>CLABE: 012 580 01502075967 2</p>
+            <p>Banco: BBVA</p>
+        </div>
+        <br>
+        <br>
+        <div class="iglesia">
+            <h2>Cuenta Bancaria Holanda</h2>
+            <p>Christian Mier Escurra</p>
+            <p>Cuenta: NL54 ABNA 0880212314</p>
+            <p>Banco: ABN AMRO</p>
+        </div>
+        <br>
+    </div>
+<!--GALERIA-->
+    <div class="blanco">
+        <h1>Galería</h1>
+        <p class="saludo">Presiona en la imagen</p>
+        <img class="img-grande" alt="" src="images/Galeria/HIMYM.png" id="imgClickAndChange" onclick="changeImage()"/>
+    </div>
+<!--ASISTENCIA-->
+    <div class="rosa">
+        <h1>Confirmación de Invitados</h1>
+        <form action="https://script.google.com/macros/s/AKfycbwZ30icZDpe35Y1t4b1U5tdfQJ75VPEC7uq1ZsSTFwpxTCl92j0CyfO1D2LtAOTFNF5/exec"
+              method="POST"
+                id="my-form">
+            <div class="enviarcodigo">
+                <p class="saludo">Para habilitar la confirmación inserta el código enviado por WhatsApp.</p>
+                <input id="code" class="code" type="text" name="Code" placeholder="Código" required>
+                <button class="enviar" type="button" id="Json" onclick="OpenJson()">enviar</button>
+            </div>
+            <input hidden name="Name" id="Name">
+<!--            <input hidden name="LastName" id="Last">-->
+            <p id="saludo" class="saludo"></p>
+            <div class="assistance" id="assistance">
+                <select onchange="AssistanceActivate()" class="asistencia" name="Asistance" id="asistencia" required>
+                    <option value="header" selected disabled>¿Asistiré?</option>
+                    <option value="Si">Sí</option>
+                    <option value="No">No</option>
+                </select>
+                <br>
+                <br>
+                 <select onchange="AcompanantesActivate()" class="asistencia" name="Companion" id="acompanantes">
+                     <option value="header" selected disabled>Invitaciones:</option>
+<!--                     <option hidden value="0">0</option>-->
+                     <option value="1">1</option>
+                 </select>
+                 <br>
+                <br>
+                <textarea id="mensajenovios" class="nombre" name="yourMessage" rows="5" placeholder="Mensaje para los novios"></textarea>
+                <br>
+                <br>
+<!--                style="display: none;"-->
+                <input id="enviar" class="enviar" type="submit" name="" value="Confirmar" disabled>
+                <p class="saludo" id="recibido"></p>
+            </div>
+        </form>
+        <p class="saludo">Por cuestiones de seguridad y logística, no se aceptará el ingreso a la recepción a menores de edad.</p>
+    </div>
+<!--Recomandaciones-->
+    <div class="blanco">
+        <h1>Recomendaciones</h1>
+        <div class="iglesia" style="background-image: url(images/gris1.jpeg);">
+            <h2>Hospedaje</h2>
+            <p><b>Hilton Garden Inn Aguascalientes</b></p>
+            <img class="hotel-img" src="images/hospedaje.png">
+            <p class="justificado">Más información al descargar el PDF:</p>
+            <a  class="btn_white" href="Flyer reservaciones- Boda Julissa y Christian 23 Sep 2023.pdf">Descargar</a>
+        </div>
+        <br>
+        <br>
+    </div>
+<!--Te esperamos-->
+    <div class="rosa">
+        <h1>¡Te Esperamos!</h1>
+    </div>
+
+<script src="script.js"></script>
+<script>
+<!--                Set the date we're counting down to-->
+    var countDownDate = new Date("Oct 24, 2026 17:00:00").getTime();
+
+    <!--                // Update the count down every 1 second-->
+    var x = setInterval(function() {
+
+    <!--                  // Get today's date and time-->
+      var now = new Date().getTime();
+
+    <!--                  // Find the distance between now and the count down date-->
+      var distance = countDownDate - now;
+
+    <!--                  // Time calculations for days, hours, minutes and seconds-->
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    <!--                  // Output the result in an element with id="demo"-->
+      document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+      + minutes + "m " + seconds + "s ";
+
+    <!--                  // If the count down is over, write some text -->
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+
+<!--https://christianmier.github.io/JyC-->
+<!--http://localhost:63342/Wedding-->
+function play() {
+    if (document.getElementById("playpause").src == "https://christianmier.github.io/JyC/images/play.png")
+        {document.getElementById("playpause").src = "images/pause.png"; document.getElementById('player').play();}
+    else {
+        if (document.getElementById("playpause").src == "https://christianmier.github.io/JyC/images/pause.png")
+        {document.getElementById("playpause").src = "images/play.png"; document.getElementById('player').pause();}
+        }
+}
+
+function changeImage() {
+console.log(document.getElementById("imgClickAndChange").src)
+    if (document.getElementById("imgClickAndChange").src == "https://christianmier.github.io/JyC/images/Galeria/HIMYM.png")
+        {document.getElementById("imgClickAndChange").src = "https://christianmier.github.io/JyC/images/Galeria/parismain1.png";}
+    else {
+        if (document.getElementById("imgClickAndChange").src == "https://christianmier.github.io/JyC/images/Galeria/parismain1.png")
+            {document.getElementById("imgClickAndChange").src = "https://christianmier.github.io/JyC/images/Galeria/DKH_0499.png";}
+        else{
+            if (document.getElementById("imgClickAndChange").src == "https://christianmier.github.io/JyC/images/Galeria/DKH_0499.png")
+                {document.getElementById("imgClickAndChange").src = "https://christianmier.github.io/JyC/images/Galeria/DKH_0668.png";}
+            else {
+                if (document.getElementById("imgClickAndChange").src == "https://christianmier.github.io/JyC/images/Galeria/DKH_0668.png")
+                {document.getElementById("imgClickAndChange").src = "https://christianmier.github.io/JyC/images/Galeria/DKH_0778.png";}
+                else {
+                    if (document.getElementById("imgClickAndChange").src == "https://christianmier.github.io/JyC/images/Galeria/DKH_0778.png")
+                    {document.getElementById("imgClickAndChange").src = "https://christianmier.github.io/JyC/images/Galeria/DKH_0792.png";}
+                     else {
+                        if (document.getElementById("imgClickAndChange").src == "https://christianmier.github.io/JyC/images/Galeria/DKH_0792.png")
+                        {document.getElementById("imgClickAndChange").src = "https://christianmier.github.io/JyC/images/Galeria/DKH_0863.png";}
+                        else {
+                            if (document.getElementById("imgClickAndChange").src == "https://christianmier.github.io/JyC/images/Galeria/DKH_0863.png")
+                            {document.getElementById("imgClickAndChange").src = "https://christianmier.github.io/JyC/images/Galeria/HIMYM.png";}
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+</script>
+
+</body>
+</html>
